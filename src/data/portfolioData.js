@@ -23,7 +23,7 @@ export const personalInfo = {
   linkedin: "https://linkedin.com/in/aryan-mahanty26",
   leetcode: "https://leetcode.com/u/Aryancoder2626",
   instagram: "https://instagram.com/aryan.meranaam",
-  resumeUrl: "src/RESUME.pdf", // Add your PDF resume link here
+  resumeUrl: "public/certificates/RESUME.pdf", // Add your PDF resume link here
   
   // Quick 1-line elevator pitch for recruiters
   elevatorPitch: "[Full-stack creative developer specializing in modern web architecture, interactive 3D/canvas experiences, and high-performance user interfaces.]",
@@ -416,8 +416,8 @@ export const certificatesData = [
     title: "[CERTIFICATE 01: AI & ML Launchpad program]",
     issuer: "[Edge3]",
     date: "[2026]",
-    verifyUrl: "src/AI & ML Launchpad completion certificate by Edge3 .pdf",
-    certificatePdf: "src/AI & ML Launchpad completion certificate by Edge3 .pdf",
+    verifyUrl: "public/certificates/AI & ML Launchpad completion certificate by Edge3 .pdf",
+    certificatePdf: "public/certificates/AI & ML Launchpad completion certificate by Edge3 .pdf",
     rarity: "Course Completion",
     badgeIcon: "Code2",
     skills: ["[Python]", "[Machine Learning]", "[Artificial Intelligence]"],
@@ -428,8 +428,8 @@ export const certificatesData = [
     title: "[CERTIFICATE 02:INTRODUCTION TO DATA SCIENCE]",
     issuer: "[INFOSYS SPRINGBOARD]",
     date: "[2026]",
-    verifyUrl: "src/infosysDataScience.pdf",
-    certificatePdf: "src/infosysDataScience.pdf",
+    verifyUrl: "public/certificates/infosysDataScience.pdf",
+    certificatePdf: "public/certificates/infosysDataScience.pdf",
     rarity: "Certification",
     badgeIcon: "CloudLightning",
     skills: ["[Python]", "[Machine Learning]", "[Data Analysis]", "[Data Visualization]", "[Data Handling]"],
@@ -440,8 +440,8 @@ export const certificatesData = [
     title: "[CERTIFICATE 03: AI Tools & ChatGPT Workshops]",
     issuer: "[be10x]",
     date: "[2026]",
-    verifyUrl: "src/CertificateBe10x.pdf",
-    certificatePdf: "src/CertificateBe10x.pdf",
+    verifyUrl: "public/certificates/CertificateBe10x.pdf",
+    certificatePdf: "public/certificates/CertificateBe10x.pdf",
     rarity: "Certification",
     badgeIcon: "Code2",
     skills: ["[AI Tools]", "[ChatGPT Workshops]"],
@@ -452,8 +452,8 @@ export const certificatesData = [
     title: "[CERTIFICATE 04: GuideWire Devtrails University Hackathon]",
     issuer: "[National Insurance Academy]",
     date: "[2026]",
-    verifyUrl: "src/guidewireHackathonCertificate.pdf",
-    certificatePdf: "src/guidewireHackathonCertificate.pdf",
+    verifyUrl: "public/certificates/guidewireHackathonCertificate.pdf",
+    certificatePdf: "public/certificates/guidewireHackathonCertificate.pdf",
     rarity: "Hackathon",
     badgeIcon: "Code2",
     skills: ["[Full-Stack Web]", "[Insurance Model]", "[System Design]"],
@@ -477,7 +477,7 @@ export const experienceData = [
       "Explored agentic AI workflows with LangGraph and AutoGen and debugged real-world issues like API deprecations and Python version conflicts.",
     ],
     techStack: ["Python", "Scikit-learn", "XGBoost", "TensorFlow", "LangGraph", "LlamaIndex", "Pinecone", "Streamlit"],
-    certificatePdf: "src/celebal-data-science-internship-completion.pdf",
+    certificatePdf: "public/certificates/celebal-data-science-internship-completion.pdf",
   }  
 ];
 
