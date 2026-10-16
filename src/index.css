@@ -1,0 +1,255 @@
+﻿@import "tailwindcss";
+
+:root {
+  --color-accent-primary: #ff6b3d;
+  --color-accent-glow: rgba(255, 107, 61, 0.45);
+  --color-accent-secondary: #ff4d88;
+  --color-accent-subtle: rgba(255, 107, 61, 0.12);
+  --color-bg-dark: #0b0b10;
+  --color-bg-surface: #101018;
+  --color-bg-card: #151522;
+  --color-bg-card-hover: #1d1d2f;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-accent: rgba(255, 107, 61, 0.35);
+  --theme-name: "Sakura Drift";
+}
+
+[data-theme="cyan"], [data-theme="neo"] {
+  --color-accent-primary: #00f2fe;
+  --color-accent-glow: rgba(0, 242, 254, 0.45);
+  --color-accent-secondary: #4facfe;
+  --color-accent-subtle: rgba(0, 242, 254, 0.12);
+  --color-bg-dark: #080d15;
+  --color-bg-surface: #0c1422;
+  --color-bg-card: #111b2e;
+  --color-bg-card-hover: #172640;
+  --color-border-accent: rgba(0, 242, 254, 0.35);
+  --theme-name: "Neo Shibuya";
+}
+
+[data-theme="amber"], [data-theme="shiba"] {
+  --color-accent-primary: #f59e0b;
+  --color-accent-glow: rgba(245, 158, 11, 0.45);
+  --color-accent-secondary: #fb923c;
+  --color-accent-subtle: rgba(245, 158, 11, 0.12);
+  --color-bg-dark: #0e0b06;
+  --color-bg-surface: #161109;
+  --color-bg-card: #1f170c;
+  --color-bg-card-hover: #2b2010;
+  --color-border-accent: rgba(245, 158, 11, 0.35);
+  --theme-name: "Shiba Gold";
+}
+
+[data-theme="emerald"], [data-theme="viper"], [data-theme="jade"] {
+  --color-accent-primary: #10b981;
+  --color-accent-glow: rgba(16, 185, 129, 0.45);
+  --color-accent-secondary: #34d399;
+  --color-accent-subtle: rgba(16, 185, 129, 0.12);
+  --color-bg-dark: #08110e;
+  --color-bg-surface: #0d1a16;
+  --color-bg-card: #12241f;
+  --color-bg-card-hover: #1a322c;
+  --color-border-accent: rgba(16, 185, 129, 0.35);
+  --theme-name: "Viper Jade";
+}
+
+[data-theme="violet"], [data-theme="void"] {
+  --color-accent-primary: #a855f7;
+  --color-accent-glow: rgba(168, 85, 247, 0.45);
+  --color-accent-secondary: #ec4899;
+  --color-accent-subtle: rgba(168, 85, 247, 0.12);
+  --color-bg-dark: #0d0915;
+  --color-bg-surface: #130d20;
+  --color-bg-card: #1b122e;
+  --color-bg-card-hover: #261942;
+  --color-border-accent: rgba(168, 85, 247, 0.35);
+  --theme-name: "Amethyst Void";
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-primary);
+    font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    position: relative;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  ::selection {
+    background: var(--color-accent-primary);
+    color: #000;
+  }
+
+  /* Anime Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-dark);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #272738;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-primary);
+    box-shadow: 0 0 10px var(--color-accent-glow);
+  }
+}
+
+@layer utilities {
+  /* Anime Typography & Halftones */
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .text-gradient {
+    background-image: linear-gradient(135deg, #ffffff 20%, var(--color-accent-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background-image: linear-gradient(135deg, var(--color-accent-primary) 0%, var(--color-accent-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Manga Halftone Grid */
+  .halftone-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+
+  .halftone-pattern-accent {
+    background-image: radial-gradient(var(--color-accent-glow) 1.2px, transparent 1.2px);
+    background-size: 20px 20px;
+  }
+
+  /* Aura Glow Utilities */
+  .glow-shadow {
+    box-shadow: 0 0 25px var(--color-accent-glow);
+  }
+
+  .glow-shadow-lg {
+    box-shadow: 0 0 50px var(--color-accent-glow);
+  }
+  
+  .glow-border {
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 16px var(--color-accent-glow);
+  }
+
+  /* Anime HUD Card & Panels */
+  .anime-panel {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-subtle);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .anime-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid var(--color-accent-primary);
+    border-left: 2px solid var(--color-accent-primary);
+    opacity: 0.8;
+  }
+
+  .anime-panel::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid var(--color-accent-primary);
+    border-right: 2px solid var(--color-accent-primary);
+    opacity: 0.8;
+  }
+
+  .anime-panel:hover {
+    border-color: var(--color-border-accent);
+    box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.6), 0 0 20px var(--color-accent-glow);
+    transform: translateY(-3px);
+  }
+
+  /* Holographic Foil effect for collectible certificates */
+  .holo-foil {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.15) 25%,
+      rgba(var(--color-accent-primary), 0.2) 50%,
+      rgba(255, 255, 255, 0.15) 75%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    background-size: 200% 200%;
+    animation: holoShine 5s ease infinite;
+  }
+
+  @keyframes holoShine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Anime Scanlines */
+  .scanlines {
+    position: relative;
+  }
+  .scanlines::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
+    z-index: 20;
+    background-size: 100% 3px, 6px 100%;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  /* Floating anime companion bobbing */
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+  }
+
+  .animate-float-slow {
+    animation: floatSlow 4s ease-in-out infinite;
+  }
+
+  /* Glowing aura pulse */
+  @keyframes auraPulse {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+  }
+
+  .animate-aura-pulse {
+    animation: auraPulse 3s ease-in-out infinite;
+  }
+}
