@@ -58,16 +58,16 @@ export default function Footer({ onReplayIntro }) {
         {/* Bottom Credits */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-500 text-[11px]">
           <div>
-            © {new Date().getFullYear()} {personalInfo.name}. Handcrafted with care & engineering rigor.
+            © {new Date().getFullYear()} {personalInfo.name}.
           </div>
           <div className="flex items-center gap-2 text-slate-400">
-            <span>React 19</span>
-            <span>•</span>
-            <span>Tailwind CSS</span>
-            <span>•</span>
-            <span>Framer Motion</span>
-            <span>•</span>
-            <span className="text-[var(--color-accent-primary)]">Zero AI Boilerplate</span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span className="text-[var(--color-accent-primary)]"></span>
           </div>
         </div>
       </div>
