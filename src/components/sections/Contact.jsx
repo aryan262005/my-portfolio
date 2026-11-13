@@ -15,6 +15,7 @@ import { sound } from "../../utils/audio";
 import { personalInfo } from "../../data/portfolioData";
 import Card3D from "../ui/Card3D";
 import Section3DTransition from "../ui/Section3DTransition";
+const WEB3FORMS_ACCESS_KEY = "cb2a3c00-25b2-4eb4-9d51-24bfb387794d";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
